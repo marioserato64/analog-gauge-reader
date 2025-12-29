@@ -1,0 +1,8 @@
+Image shape: (299, 400, 4)
+Gray size: 400x299
+Center: (200, 149), Radius est: 99
+Total regions: 1
+
+Region 0: area=50531, ecc=0.14, len=254.9, dist=2.6 -> in_r=True, elong=False, big=True => NEEDLE=False
+
+Needle candidates: 0

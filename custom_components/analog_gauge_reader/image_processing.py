@@ -44,25 +44,20 @@ def process_gauge_image(image_bytes: bytes, min_val: float, max_val: float) -> f
         height, width = gray.shape
         _LOGGER.debug("Grayscale image: %dx%d", width, height)
         
-        # Try multiple edge detection parameters
-        best_result = None
-        
-        for sigma in [1.0, 1.5, 2.0, 2.5, 3.0]:
-            result = _detect_gauge(gray, sigma, min_val, max_val, height, width)
-            if result is not None:
-                best_result = result
-                break
-        
-        if best_result is not None:
-            _LOGGER.info("Gauge reading detected: %.2f", best_result)
-            return best_result
-        
-        # Fallback: try threshold-based detection
-        _LOGGER.debug("Trying threshold-based detection...")
+        # PRIORITY 1: Use threshold-based detection (best for selecting longest needle)
+        _LOGGER.debug("Trying threshold-based detection (primary method)...")
         result = _detect_gauge_threshold(gray, min_val, max_val, height, width)
         if result is not None:
             _LOGGER.info("Gauge reading (threshold method): %.2f", result)
             return result
+        
+        # FALLBACK: Try Hough-based detection if threshold fails
+        _LOGGER.debug("Threshold failed, trying Hough-based detection...")
+        for sigma in [1.0, 1.5, 2.0, 2.5, 3.0]:
+            result = _detect_gauge(gray, sigma, min_val, max_val, height, width)
+            if result is not None:
+                _LOGGER.info("Gauge reading (Hough method): %.2f", result)
+                return result
         
         _LOGGER.warning("Could not detect gauge reading with any method")
         return None

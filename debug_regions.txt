@@ -1,0 +1,14 @@
+Image: 640x360, center: (320, 180), radius_est: 120
+
+Region 0: area=57940, ecc=0.90, len=419.9, dist=239.9
+  Filters: in_range=False, elongated=True, big=True
+Region 1: area=404, ecc=0.88, len=36.6, dist=354.6
+  Filters: in_range=False, elongated=True, big=True
+Region 2: area=4145, ecc=0.92, len=130.3, dist=327.7
+  Filters: in_range=False, elongated=True, big=True
+Region 3: area=406, ecc=0.51, len=24.6, dist=115.4
+  Filters: in_range=True, elongated=False, big=True
+Region 4: area=1679, ecc=0.72, len=56.9, dist=163.0
+  Filters: in_range=False, elongated=True, big=True
+Region 5: area=1388, ecc=0.83, len=57.3, dist=220.2
+  Filters: in_range=False, elongated=True, big=True
