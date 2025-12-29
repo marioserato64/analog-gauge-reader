@@ -1,0 +1,14 @@
+{
+  "domain": "analog_gauge_reader",
+  "name": "Analog Gauge Reader",
+  "version": "1.0.0",
+  "documentation": "https://github.com/andrea-pappinait/analog-gauge-reader",
+  "requirements": [
+    "opencv-python-headless==4.8.0.76",
+    "numpy==1.24.3"
+  ],
+  "dependencies": [],
+  "codeowners": [],
+  "iot_class": "local_polling",
+  "config_flow": true
+}

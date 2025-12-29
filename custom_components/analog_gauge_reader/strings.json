@@ -1,0 +1,22 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Analog Gauge Reader",
+        "description": "Set up your analog gauge reader by selecting a camera and configuring the parameters.",
+        "data": {
+          "camera_entity": "Camera Entity",
+          "interval": "Update Interval",
+          "min_reading": "Minimum Gauge Value",
+          "max_reading": "Maximum Gauge Value",
+          "alarm_1": "Alarm Threshold 1",
+          "alarm_2": "Alarm Threshold 2",
+          "alarm_3": "Alarm Threshold 3"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This gauge reader is already configured."
+    }
+  }
+}

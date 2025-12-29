@@ -1,0 +1,7 @@
+{
+  "name": "Analog Gauge Reader",
+  "render_readme": true,
+  "filename": "analog_gauge_reader.zip",
+  "homeassistant": "2024.12.0",
+  "country": "IT"
+}

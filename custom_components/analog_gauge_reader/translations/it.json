@@ -1,0 +1,22 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configura Lettore Manometro Analogico",
+        "description": "Configura il lettore selezionando una telecamera e impostando i parametri.",
+        "data": {
+          "camera_entity": "Entità Telecamera",
+          "interval": "Intervallo di Aggiornamento",
+          "min_reading": "Valore Minimo Manometro",
+          "max_reading": "Valore Massimo Manometro",
+          "alarm_1": "Soglia Allarme 1",
+          "alarm_2": "Soglia Allarme 2",
+          "alarm_3": "Soglia Allarme 3"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Questo lettore è già configurato."
+    }
+  }
+}
